@@ -1,0 +1,955 @@
+const int switchPin = 3;
+int ledPins[] = {7,8,9,10,11,12,13};
+
+void setup(){
+  pinMode(switchPin,INPUT);
+
+  int index;
+
+  for(index = 0; index <= 6; index++)
+  {
+    pinMode(ledPins[index],OUTPUT);
+  }
+}
+
+void loop(){
+  int switchVal;
+  int index;
+
+  switchVal = digitalRead(switchPin);
+
+  if(switchVal == HIGH){
+      /* FIRST - BABY SHARK */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"ba-"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(450);                                             //"-by"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all are on
+      }
+      delay(300);                                             //"shark"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all are off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+
+      /* SECOND */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"ba-"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-by"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all are on
+      }
+      delay(300);                                             //"shark"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all are off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+
+      /* THIRD */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"ba-"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-by"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all are on
+      }
+      delay(300);                                             //"shark"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all are off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+
+      /* FOURTH - BABY SHARK ONLY */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"ba-"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-by"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all are on
+      }
+      delay(300);                                             //"shark"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all are off
+      }
+
+      /* FIRST - MOMMY SHARK */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"mom-2"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(450);                                             //"-my2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark2"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+
+      /* SECOND */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"mom-2"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-my2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark2"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+
+      /* THIRD */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"mom-2"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-my2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark2"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do2"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+
+      /* FOURTH - MOMMY SHARK ONLY */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"mom-2"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-my2"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark2"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FIRST - DADDY SHARK */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(450);                                             //"dad-3"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"-dy3"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[1], HIGH); //first blue is on      //"do-3"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do3"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on    //"-do3"
+      delay(200);
+      digitalWrite(ledPins[5], HIGH); //second blue is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* SECOND */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"dad-3"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-dy3"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[1], HIGH); //first blue is on      //"do-3"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do3"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on    //"-do3"
+      delay(200);
+      digitalWrite(ledPins[5], HIGH); //second blue is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* THIRD */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"dad-3"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-dy3"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[1], HIGH); //first blue is on      //"do-3"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do3"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on    //"-do3"
+      delay(200);
+      digitalWrite(ledPins[5], HIGH); //second blue is on     //"-do3"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FOURTH - DADDY SHARK ONLY */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"dad-3"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-dy3"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark3"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FIRST - GRANDMA SHARK */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(450);                                             //"grand-4"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"-ma4"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[5], HIGH); //second blue is on      //"do-4"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do4"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on    //"-do4"
+      delay(200);
+      digitalWrite(ledPins[1], HIGH); //first blue is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* SECOND */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"grand-4"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-ma4"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[5], HIGH); //second blue is on      //"do4"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do4"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on    //"-do4"
+      delay(200);
+      digitalWrite(ledPins[1], HIGH); //first blue is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* THIRD */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"grand-4"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-ma4"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[5], HIGH); //second blue is on      //"do-4"
+      delay(200);
+      digitalWrite(ledPins[4], HIGH); //second green is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do4"
+      delay(200);
+      digitalWrite(ledPins[2], HIGH); //first green is on    //"-do4"
+      delay(200);
+      digitalWrite(ledPins[1], HIGH); //first blue is on     //"-do4"
+      delay(200);
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"-do4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FOURTH - GRANDMA SHARK ONLY */
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"grand-4"
+      digitalWrite(ledPins[1], LOW); //first blue is off 
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"-ma4"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark4"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FIRST - GRANDPA SHARK */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"grand-5"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(450);                                             //"-pa5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark5"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first green is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //first green is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is off
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+
+      /* SECOND */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"grand-5"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-pa5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark5"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first green is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //first green is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is off
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+
+      /* THIRD */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(400);                                             //"grand-5"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(400);                                             //"-pa5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark5"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first green is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //first green is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is off
+      delay(200);                                             //"do-5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+
+      /* FOURTH - GRANDPA SHARK ONLY */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(350);                                             //"grand-5"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(350);                                             //"-pa5"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"shark5"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+
+      /* FIRST - LET’S GO HUNT */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"let’s-6"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(450);                                             //"-go6"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"hunt6"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on      //"do-6"
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do6"
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do6"
+      delay(200);
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off     //"-do6"
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+
+      /* SECOND */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"let’s-6"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(450);                                             //"-go6"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"hunt6"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on      //"do-6"
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do6"
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do6"
+      delay(200);
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off     //"-do6"
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+
+      /* THIRD */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"let’s-6"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(450);                                             //"-go6"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"hunt6"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+      digitalWrite(ledPins[0], HIGH); //first red is on      //"do-6"
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(200);
+      digitalWrite(ledPins[0], LOW); //first red is off
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on     //"-do6"
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(200);
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[3], HIGH); //yellow is on          //"-do6"
+      delay(200);
+      digitalWrite(ledPins[3], LOW); //yellow is off
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      delay(200);
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off     //"-do6"
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+
+      /* FOURTH - LET’S GO HUNT ONLY */
+      digitalWrite(ledPins[0], HIGH); //first red is on
+      digitalWrite(ledPins[1], HIGH); //first blue is on
+      digitalWrite(ledPins[5], HIGH); //second blue is on
+      digitalWrite(ledPins[6], HIGH); //second red is on
+      delay(450);                                             //"let’s-6"
+      digitalWrite(ledPins[0], LOW); //first red is off 
+      digitalWrite(ledPins[6], LOW); //second red is off
+      digitalWrite(ledPins[2], HIGH); //first green is on
+      digitalWrite(ledPins[4], HIGH); //second green is on
+      delay(450);                                             //"-go6"
+      digitalWrite(ledPins[1], LOW); //first blue is off
+      digitalWrite(ledPins[5], LOW); //second blue is off
+      digitalWrite(ledPins[2], LOW); //first green is off
+      digitalWrite(ledPins[4], LOW); //second green is off
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], HIGH); //all on
+      }
+      delay(300);                                             //"hunt6"
+      for(index = 0; index <= 6; index++)
+      {
+        digitalWrite(ledPins[index], LOW); //all off
+      }
+  }else{
+    for(index = 6; index >= 0; index--)
+    {
+      digitalWrite(ledPins[index], LOW);
+    }
+  }
+}
